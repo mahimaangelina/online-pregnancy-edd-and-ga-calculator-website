@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Pregnancy Calculator </title>
+    <head>
+        <style>
+          body {
+            background-image: url("imagess/photo2.jpg");
+            background-repeat: no-repeat;
+            background-size: 110%;
+          }
+        </style>
+      </head>
+      <body>
+        <!-- Content of your website goes here -->
+      
+
+
+
+<title>Online Pregnancy Calculator </title>
+<script type="text/javascript">
+function calc()
+{
+var day = document.first.len11.value;
+var mon = document.first.len12.value;
+var year = document.first.len13.value;
+var ylen = year.length;
+var d = new Array("SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY");
+var m = new Array("JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER",
+"DECEMBER");
+var curd = new Date(year,mon-1,day);
+var res2 = curd.getMonth();
+var res = new Date();
+var diff =
+Date.UTC(res.getFullYear(),res.getMonth()-1,res.getDay(),0,0,0)
+- Date.UTC(curd.getFullYear(),curd.getMonth()-1,curd.getDay(),0,0,0);
+var secleft = diff/1000/60;
+var hrsleft = secleft/60;
+var daysleft = hrsleft/24;
+//if(res2 == (mon-1) && daysleft < 300 && year!="")
+if (year!="" && ylen>3)
+{
+var fd1 = new Date(year, mon-1, parseInt(day)+10);
+document.first.fd1.value = d[fd1.getDay()]+", "+m[fd1.getMonth()]+" "+fd1.getDate()+", "+fd1.getFullYear();
+var fd2 = new Date(year, mon-1, parseInt(day)+20);
+document.first.fd2.value = d[fd2.getDay()]+", "+m[fd2.getMonth()]+" "+fd2.getDate()+", "+fd2.getFullYear();
+var cd = new Date(year, mon-1, parseInt(day)+14);
+document.first.cd.value = d[cd.getDay()]+", "+m[cd.getMonth()]+" "+cd.getDate()+", "+cd.getFullYear();
+var fte = new Date(year, mon-1, parseInt(day)+84);
+document.first.fte.value = d[fte.getDay()]+", "+m[fte.getMonth()]+" "+fte.getDate()+", "+fte.getFullYear();
+var ste = new Date(year, mon-1, parseInt(day)+189);
+document.first.ste.value = d[ste.getDay()]+", "+m[ste.getMonth()]+" "+ste.getDate()+", "+ste.getFullYear();
+var dd = new Date(year, mon-1, parseInt(day)+280);
+document.first.dd.value = d[dd.getDay()]+", "+m[dd.getMonth()]+" "+dd.getDate()+", "+dd.getFullYear();
+}
+else{
+alert("Invalid Date");
+}
+}
+function isNumber(evt) {evt = (evt) ? evt : window.event;var charCode = (evt.which) ? evt.which : evt.keyCode;if (charCode > 31 && (charCode < 48 || charCode > 57)) {return false;}return true;
+}
+function chk(){
+var sds = document.getElementById('dum');
+if(sds == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");
+document.getElementById("tab").style.visibility="hidden";
+}
+var sdss = document.getElementById("dumdiv");
+if(sdss == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");}
+}
+window.onload=chk;
+</script>
+<style>
+.leftt
+{float:left;
+color: #a08820; font-size:13px;
+}
+.tbox
+{
+width:45% !important;
+}
+.frms {border: 1px solid opaque;border-radius: 0.3em;color: #1790c0;font-family: Tahoma,Geneva,sans-serif;font-size: 0.9em;line-height: 1.2em;margin: 0 auto;padding: 10px;width:50%;
+}
+.frms input[type="text"], [type="password"], [type="file"], textarea, select {background: none repeat scroll 0 0 #ffffff;border: 1px solid #ddd;border-radius: 0.35em;height: 35px;margin-bottom: 15px;margin-top: 5px;padding: 0 0.5%;width: 99%;
+}
+.frms input[type="submit"], input[type="reset"], input[type="button"], button, .yellow_button, .blue_button {border: medium none;border-radius: 0.3em;color: #fff;cursor: pointer;font-weight: bold;margin: 10px 0;padding: 7px 14px;
+}
+.frms input[type="reset"] {background: none repeat scroll 0 0 #e6e20f;border-bottom: 3px solid #b6ab18;text-shadow: 1px 1px 0 #bebb05;
+}
+input[type="button"], button, .blue_button {background: none repeat scroll 0 0 #14c50e;border-bottom: 3px solid #2f921b;text-shadow: 1px 1px 0 #155006;
+}
+.new
+{padding: 16px;
+}
+@media only screen and (max-width:480px)
+{.frms {width:90% !important;}.tbox
+{
+width:95% !Important;
+}.frms input[type="text"], [type="password"], [type="file"], textarea, select {width:95% !important;}}
+</style>
+</head>
+<body>
+<div class='resp_code'>
+<p align='center'><h2 align='center'> Online Pregnancy Calculator
+</h2></p>
+<div class='clear'></div>
+<form id='tab' name=first class='frms'>
+<div>
+<div align='center'><label><i><u>Date of Last Menstrual Period:</u></i></label></div><br>
+<div class="group_con">
+<label class='leftt'>Select your First day of Last menstrual Period Date </label><select name=len11><option name=1 value=1>1</option>
+<option name=2 value=2>2</option><option name=3 value=3>3</option><option name=4 value=4>4</option>
+<option name=5 value=5>5</option><option name=6 value=6>6</option><option name=7 value=7>7</option><option name=8 value=8>8</option>
+<option name=9 value=9>9</option><option name=10 value=10>10</option><option name=11 value=11>11</option>
+<option name=12 value=12>12</option><option name=13 value=13>13</option><option name=14 value=14>14</option>
+<option name=15 value=15>15</option><option name=16 value=16>16</option><option name=17 value=17>17</option>
+<option name=18 value=18>18</option><option name=19 value=19>19</option><option name=20 value=20>20</option>
+<option name=21 value=21>21</option><option name=22 value=22>22</option><option name=23 value=23>23</option>
+<option name=24 value=24>24</option><option name=25 value=25>25</option><option name=26 value=26>26</option>
+<option name=27 value=27>27</option><option name=28 value=28>28</option><option name=29 value=29>29</option>
+<option name=30 value=30>30</option><option name=31 value=31>31</option>
+</select></div>
+<div class="group_con"><label class='leftt'>Select the Month of Last Menstrual Period</label><select name=len12><option name=1 value=1>1</option>
+<option name=2 value=2>2</option><option name=3 value=3>3</option><option name=4 value=4>4</option><option name=5 value=5>5</option>
+<option name=6 value=6>6</option><option name=7 value=7>7</option><option name=8 value=8>8</option><option name=9 value=9>9</option>
+<option name=10 value=10>10</option><option name=11 value=11>11</option><option name=12 value=12>12</option></select>
+</div>
+<div class='group_con'><label class='leftt'>Enter the Year</label>
+<input name=len13 type=text onkeypress="return isNumber(event)" maxlength='4'>
+</div></div>
+<div align='center'><input type=button
+name=cc value=Calculate onClick="calc()">
+<input type="reset" value="Reset">
+</div>
+<div align='center'><h5><i><b><u>Calculation Results:</u></b></i></h5></div><label class='leftt'>Estimated Fertility Dates :</label><br><br>
+<span><input type=text readonly
+class='tbox' name=fd1 style='float:left;'></span>
+<span class='new'>
+to
+</span>
+<span><input type=text readonly
+class='tbox' name=fd2> </span><div> <label class='leftt'>Estimated Conception Date :</label>
+<input type=text readonly name=cd> </div><div> <label class='leftt'>First Trimester Ends(12 Weeks) :</label>
+<input type=text readonly name=fte> </div>
+<div> <label class='leftt'>Second Trimester Ends(27 Weeks):</label>
+<input type=text readonly name=ste> </div>
+<div> <label class='leftt'>Estimated Due Date(40 Weeks) :</label>
+<input type=text readonly name=dd> </div><script type="text/javascript"></script>
+</form>
+<div id="dumdiv" align="center" style=" font-size: 10px;color: #dadada;"><a id="dum" style="padding-right:0 px; text-decoration:none; color: green; text-align:center;" href="https://www.hscripts.com"></a></div>
+</div>
+</body>
+
+
+
+
+<head>
+  <title>Estimated Gestational Age Calculator</title>
+  <script>
+    function calculateGestationalAge() {
+      var lmpDate = document.getElementById("lastMenstrualPeriod").value;
+      var currentDate = new Date();
+
+      var millisecondsPerWeek = 7 * 24 * 60 * 60 * 1000; // Number of milliseconds in a week
+      var gestationalAgeInWeeks = Math.floor((currentDate - new Date(lmpDate)) / millisecondsPerWeek);
+
+      document.getElementById("result").textContent = "Estimated Gestational Age: " + gestationalAgeInWeeks + " weeks";
+    }
+  </script>
+</head>
+<body>
+  <h1>Estimated Gestational Age Calculator</h1>
+  <label for="lastMenstrualPeriod">First day of Last Menstrual Period (MM-DD-YYYY):</label>
+  <input type="date" id="lastMenstrualPeriod" required>
+  <br>
+  <!--<button style= background-color:#3d26a1 onclick="calculateGestationalAge()">calculate</button>-->
+
+  <style>
+    /* CSS code */
+    .border-button {
+      border: 2px solid #cf2d2d; /* Replace #cf2d2d with your desired color code */
+      padding: 10px 20px;
+      background-color: #f32f2f;
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+  <!-- Button with border color -->
+  <button class=border-button  onclick="calculateGestationalAge()"> CALCULATE</button>
+
+   <div id="result"></div>
+</body>
+</html>
